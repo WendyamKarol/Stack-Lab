@@ -26,6 +26,7 @@ L'objectif principal est de créer un système d'éclairage capable de détecter
 - **Réseau IoT** : Pour la gestion à distance et la surveillance du système à travers une interface web ou mobile.
 
 ## Architecture du Système
+-----------------------------------------------
 
 Le système se compose de plusieurs composants intégrés de manière à offrir une solution IoT complète :
 
