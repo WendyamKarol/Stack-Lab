@@ -1,12 +1,14 @@
 # Protecto-Cycle: Internet of Things (IoT) Project
 
 ## Introduction
+-----------------------------------------------
 
 Le projet **Protecto-Cycle** a été conçu pour automatiser le système d'éclairage d'un environnement spécifique, tel qu'un parc à vélos, un garage ou tout autre lieu nécessitant un éclairage en fonction de la présence d'objets ou de personnes. Ce projet fait partie du domaine de l'**Internet des Objets (IoT)** et utilise des technologies comme **Python**, **C++**, **Raspberry Pi** et **Arduino** pour offrir une solution innovante et intelligente.
 
 L'objectif principal est de créer un système d'éclairage capable de détecter la présence d'un vélo ou d'une personne dans une zone donnée et de contrôler l'éclairage en conséquence. Ce dispositif permet de réduire la consommation d'énergie tout en assurant une sécurité et une commodité optimales.
 
 ## Objectifs du Projet
+-----------------------------------------------
 
 - **Automatisation de l'éclairage** : Développer un système intelligent qui ajuste l'intensité et l'état des lumières en fonction de la présence dans la zone surveillée.
 - **Optimisation de la consommation d'énergie** : Utiliser des capteurs pour détecter la présence et éteindre les lumières lorsque la zone est vide, réduisant ainsi la consommation d'énergie.
