@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Le projet **Test & Simulation** consiste en la création d'une solution logicielle innovante qui combine un robot physique avec un système de supervision via une API REST. L'objectif principal est d'optimiser les opérations automatisées tout en offrant une gestion centralisée. Ce projet explore nos choix technologiques, notre architecture système et met en évidence notre approche méthodique des tests. Nous partagerons également nos réussites, défis rencontrés et perspectives d'évolution pour conclure sur une démonstration complète de nos compétences en développement logiciel.
+Le projet Test & Simulation a pour objectif la création d'une solution logicielle innovante permettant le contrôle et la gestion d'un robot spatial à travers un système de supervision centralisé. Ce robot, conçu pour effectuer des missions dans un environnement spatial simulé, est contrôlé à distance via une API REST. L'objectif principal du projet est d'optimiser les opérations automatisées tout en offrant une gestion centralisée et une supervision en temps réel des différentes missions.
 
 ## Choix des Outils et Techniques
 
