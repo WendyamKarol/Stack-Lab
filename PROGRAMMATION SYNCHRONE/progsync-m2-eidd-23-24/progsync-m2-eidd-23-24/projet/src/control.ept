@@ -1,0 +1,92 @@
+open Globals
+open Mathext
+open Utilities
+
+ (*Ecart par rapport à la route*)
+node ecart(sens : sensors) returns (e: float)
+let
+  e = float(sens.s_road.red - sens.s_road.green);
+tel
+
+(*
+node pid(right : bool ; k, ki, kd : float) returns (out: float)
+let 
+tel
+*)
+
+(*Le controlleur*)
+
+node controller1(sens : sensors; iti : itielts; (*map_info : map_data*))
+       returns (rspeed : wheels; arriving : bool)
+var v, k, e, ki, kd: float;
+let
+  (*v = float_of_int(map_info.max_speed);*)
+  v=500.0;
+
+  k=0.5;
+  ki=0.25 *. k;
+  kd=0.125 *. k;
+
+  e=ecart(sens);
+
+  rspeed = { left = v -. k*.e -. ki*.integrator(e, timestep, 0.0) -. kd*.derivative(e, timestep); 
+            right = v +. k*.e +. ki*.integrator(e, timestep, 0.0) +. kd*.derivative(e, timestep)};
+  arriving = false;
+tel
+
+
+node controller(sens : sensors; iti : itielts;)
+       returns (rspeed : wheels; arriving : bool)
+var v, k, e, ki, kd: float;
+
+let
+  v=500.0;
+  k=0.5;
+  ki=0.25 *. k;
+  kd=0.125 *. k;
+
+  e=ecart(sens);
+
+
+  automaton
+    state Roule
+      do 
+        rspeed = {left = v -. k*.e -. ki*.integrator(e, timestep, 0.0) -. kd*.derivative(e, timestep); 
+                  right = v +. k*.e +. ki*.integrator(e, timestep, 0.0) +. kd*.derivative(e, timestep)};
+          arriving = false;
+
+      unless compare_colors(sens.s_road, green) >. 0.9 then ModeGTS
+      (*Des qu'on a du vert non s'arrete*)
+    
+    (*state ModeGTS
+      do 
+        automaton
+          state Go
+            rspeed = {left = v -. k*.e -. ki*.integrator(e, timestep, 0.0) -. kd*.derivative(e, timestep); 
+                      right = v +. k*.e +. ki*.integrator(e, timestep, 0.0) +. kd*.derivative(e, timestep)};
+            arriving = false;
+            unless...
+                      *)
+          (*Sami
+          state Turn
+            rspeed = {left = v -. k*.e -. ki*.integrator(e, timestep, 0.0) -. kd*.derivative(e, timestep); 
+                      right = v +. k*.e +. ki*.integrator(e, timestep, 0.0) +. kd*.derivative(e, timestep)};
+            arriving = false;
+            unless...
+
+          state Stop
+            rspeed = {left = 0.0; 
+                      right = 0.0};
+            arriving = false;
+      unless 
+              *)
+    state Arret 
+      do
+        rspeed = {left = 0.0; 
+                  right = 0.0};
+        arriving = false;
+  end
+tel
+
+
+
