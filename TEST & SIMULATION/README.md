@@ -2,109 +2,108 @@
 
 ## Introduction
 
-Le projet Test & Simulation a pour objectif la création d'une solution logicielle innovante permettant le contrôle et la gestion d'un robot spatial à travers un système de supervision centralisé. Ce robot, conçu pour effectuer des missions dans un environnement spatial simulé, est contrôlé à distance via une API REST. L'objectif principal du projet est d'optimiser les opérations automatisées tout en offrant une gestion centralisée et une supervision en temps réel des différentes missions.
+The Test & Simulation project aims to create an innovative software solution for controlling and managing a space robot through a centralized supervision system. This robot, designed to carry out missions in a simulated space environment, is remotely controlled via a REST API. The main objective of the project is to optimize automated operations while providing centralized management and real-time supervision of various missions.
 
-## Choix des Outils et Techniques
+## Tools and Technologies
 
-Le projet utilise une combinaison de technologies modernes et éprouvées pour offrir une solution robuste et flexible :
+The project utilizes a combination of modern and proven technologies to offer a robust and flexible solution:
 
-- **Langage** : Java
-- **Framework** : Spring
-- **Base de données** : PostgreSQL
-- **Tests** : JUnit, Postman
-- **IDE** : IntelliJ IDEA
+- **Language**: Java  
+- **Framework**: Spring  
+- **Database**: PostgreSQL  
+- **Testing**: JUnit, Postman  
+- **IDE**: IntelliJ IDEA  
 
-### Détails techniques
+### Technical Details
 
-- **Java** : Le langage principal utilisé pour la conception du projet. Nous avons choisi Java pour sa robustesse, sa portabilité et la vaste communauté qui l'entoure.
-- **Spring** : Framework populaire qui permet de développer des applications Java modulaires et évolutives. Spring simplifie la gestion des dépendances et l'intégration des différents composants du système.
-- **PostgreSQL** : Base de données relationnelle utilisée pour stocker les informations relatives aux robots et aux missions.
-- **JUnit** et **Postman** : Utilisés pour effectuer des tests unitaires sur les composants du système et valider les points de terminaison de l'API REST.
-- **IntelliJ IDEA** : L'environnement de développement intégré (IDE) choisi pour son excellent support Java, ses fonctionnalités avancées et son intégration avec de nombreux outils de développement.
+- **Java**: The primary programming language used in the project. Java was chosen for its robustness, portability, and large community support.
+- **Spring**: A popular framework that enables the development of modular and scalable Java applications. Spring simplifies dependency management and the integration of various system components.
+- **PostgreSQL**: A relational database used to store information related to robots and missions.
+- **JUnit** and **Postman**: Used for unit testing system components and validating REST API endpoints.
+- **IntelliJ IDEA**: The chosen integrated development environment (IDE) for its excellent Java support, advanced features, and integration with various development tools.
 
-## Architecture Logicielle
+## Software Architecture
 
-L'architecture de notre solution est conçue de manière modulaire et évolutive. Voici les principaux composants :
+Our solution’s architecture is designed to be modular and scalable. The main components include:
 
-- **Robot** : Un composant physique intégré au système pour effectuer des actions automatisées.
-- **API REST** : L'architecture REST permet une communication standardisée entre le robot et le système de supervision. Les points de terminaison de l'API facilitent l'échange de données entre le robot et l'interface de gestion.
-- **Base de données** : PostgreSQL est utilisé pour stocker les informations relatives aux missions, aux robots et à d'autres entités du système.
-- **Spring** : Utilisé pour gérer les services du système, permettant une gestion centralisée et modulaire des différents processus.
+- **Robot**: A physical component integrated into the system to perform automated actions.
+- **REST API**: The REST architecture enables standardized communication between the robot and the supervision system. API endpoints facilitate data exchange between the robot and the management interface.
+- **Database**: PostgreSQL is used to store information related to missions, robots, and other system entities.
+- **Spring**: Used to manage system services, allowing centralized and modular management of various processes.
 
-### Schéma de l'architecture
+### Architecture Diagram
 
-L'architecture repose sur un modèle client-serveur où le robot agit comme un client qui envoie des données à un serveur via des points de terminaison d'API REST. Le serveur traite ces données et renvoie des réponses adaptées, facilitant ainsi l'intégration de nouveaux robots et la gestion des missions.
+The architecture is based on a client-server model where the robot acts as a client that sends data to a server via REST API endpoints. The server processes this data and returns appropriate responses, facilitating the integration of new robots and mission management.
 
-## Tests Unitaires
+## Unit Testing
 
-### Tests Unitaires pour la Classe `Mission`
+### Unit Tests for the `Mission` Class
 
-La classe `Mission` représente une entité essentielle dans notre système, décrivant les caractéristiques d'une mission attribuée à un robot. Pour garantir la robustesse et la fiabilité de cette classe, des tests unitaires ont été élaborés en utilisant le framework **JUnit**.
+The `Mission` class is a key entity in our system, describing the characteristics of a mission assigned to a robot. To ensure the robustness and reliability of this class, unit tests have been developed using the **JUnit** framework.
 
-Les tests pour la classe `Mission` incluent :
+Tests for the `Mission` class include:
 
-- Vérification de la création de missions avec des attributs valides.
-- Tests de la gestion des erreurs (par exemple, lorsque des données incorrectes sont fournies).
-- Tests de la logique métier associée à la gestion des missions.
+- Verification of mission creation with valid attributes.
+- Error management tests (e.g., when incorrect data is provided).
+- Business logic tests related to mission management.
 
-Les tests sont conçus pour s'assurer que toutes les méthodes de la classe fonctionnent correctement, en garantissant que l'attribut de la mission est bien initialisé et que les modifications sont correctement appliquées.
+These tests ensure that all class methods function correctly, verifying that mission attributes are properly initialized and modifications are applied correctly.
 
+## Features
 
-## Fonctionnalités
+Here are the main features of the **Test & Simulation** project:
 
-Voici les principales fonctionnalités du projet **Test & Simulation** :
+### 1. **Mission Creation and Management**
+   - Users can create, modify, and track missions assigned to robots.
+   - Each mission has specific attributes, such as mission name, robot ID, and objective description.
+   - The status of each mission can be updated as it progresses.
 
-### 1. **Création et gestion des missions**
-   - Les utilisateurs peuvent créer, modifier et suivre les missions attribuées aux robots.
-   - Chaque mission possède des attributs spécifiques, tels que le nom de la mission, l'identifiant du robot, et la description de l'objectif.
-   - L'état de chaque mission peut être mis à jour au fur et à mesure de son avancement.
+### 2. **Robot Supervision**
+   - The system allows real-time supervision of robot statuses via a centralized dashboard.
+   - Information about each robot, such as its status (active, paused, etc.), positioning, and ongoing missions, is accessible.
+   - Alerts can be configured to notify users in case of robot issues.
 
-### 2. **Supervision des robots**
-   - Le système permet de superviser l'état des robots en temps réel via un tableau de bord centralisé.
-   - Les informations sur chaque robot, telles que son statut (actif, en pause, etc.), son positionnement, et les missions en cours, sont accessibles.
-   - Des alertes peuvent être configurées pour notifier les utilisateurs en cas de problème avec un robot.
+### 3. **REST API for Integration and Communication**
+   - A standardized REST API architecture facilitates communication between the physical robot and the supervision system.
+   - The system exposes API endpoints for:
+     - **GET**: Retrieve information about robots, missions, and other entities.
+     - **POST**: Create new missions or add new robots.
+     - **PUT**: Update robot or mission information.
+     - **DELETE**: Remove robots or missions.
+   - The REST API enables integration with other services or applications in the supervision system.
 
-### 3. **API REST pour l'intégration et la communication**
-   - Une architecture API REST standardisée permet la communication entre le robot physique et le système de supervision.
-   - Le système expose des points de terminaison permettant :
-     - **GET** : Récupérer les informations sur les robots, missions, et autres entités.
-     - **POST** : Créer de nouvelles missions ou ajouter de nouveaux robots.
-     - **PUT** : Mettre à jour les informations des robots ou des missions.
-     - **DELETE** : Supprimer des robots ou des missions.
-   - L'API REST permet d’intégrer d’autres services ou applications au système de supervision.
+### 4. **Unit Testing for System Validation**
+   - Unit tests have been developed to validate the core system classes, such as the `Mission` class.
+   - These tests ensure that business logic functions correctly and that errors are handled properly.
+   - The **JUnit** framework is used to automate these tests, ensuring code reliability.
 
-### 4. **Tests unitaires pour la validation du système**
-   - Des tests unitaires ont été développés pour valider la bonne fonctionnalité des principales classes du système, comme la classe `Mission`.
-   - Ces tests permettent de vérifier que la logique métier fonctionne correctement et que les erreurs sont gérées correctement.
-   - Le framework **JUnit** est utilisé pour automatiser ces tests, garantissant la fiabilité du code.
+### 5. **API Testing with Postman**
+   - REST API endpoints have been tested using **Postman** to ensure that each feature works as expected.
+   - Tests include server response verification, error management tests, as well as performance and security tests to guarantee system stability.
 
-### 5. **Tests d'API avec Postman**
-   - Les points de terminaison de l'API REST ont été testés avec **Postman** afin de s'assurer que chaque fonctionnalité fonctionne comme prévu.
-   - Les tests incluent des vérifications de la réponse du serveur, des tests de gestion des erreurs, ainsi que des tests de performance et de sécurité pour garantir la stabilité du système.
+### 6. **Mission Simulation**
+   - The system allows simulating robot missions before executing them in a real environment.
+   - Users can plan and test missions in a controlled environment to ensure they function correctly before deployment.
+   - This feature reduces the risk of errors in real missions by simulating different scenarios.
 
-### 6. **Simulation des missions**
-   - Le système permet de simuler les missions des robots avant de les exécuter dans un environnement réel.
-   - Les utilisateurs peuvent planifier et tester les missions dans un environnement contrôlé pour s'assurer qu'elles fonctionnent correctement avant de les déployer.
-   - Cette fonctionnalité permet de réduire les risques d'erreurs dans les missions réelles en simulant les différents scénarios.
+### 7. **Database Management**
+   - A PostgreSQL database is used to store all information related to robots, missions, users, and other system entities.
+   - Database management is done via **JPA (Java Persistence API)**, enabling efficient data management and seamless integration with the application.
+   - Database entities are linked to different Java classes in the project, simplifying data manipulation and relationship management.
 
-### 7. **Gestion de la base de données**
-   - Une base de données PostgreSQL est utilisée pour stocker toutes les informations relatives aux robots, missions, utilisateurs, et autres entités du système.
-   - La gestion de la base de données se fait via **JPA (Java Persistence API)**, permettant une gestion efficace des données et une intégration transparente avec l'application.
-   - Les entités de la base de données sont liées aux différentes classes Java du projet, facilitant la manipulation des données et la gestion des relations entre elles.
+### 8. **Supervision Dashboard**
+   - A visual dashboard allows users to monitor robot and mission statuses in real-time.
+   - Users can view charts and statistics on robot performance, mission progress, and other key indicators.
+   - This dashboard aids decision-making by providing a clear and detailed overview of ongoing operations.
 
-### 8. **Tableau de bord de supervision**
-   - Un tableau de bord visuel est fourni pour permettre aux utilisateurs de superviser en temps réel l’état des robots et des missions.
-   - Les utilisateurs peuvent visualiser des graphiques et des statistiques sur les performances des robots, les progrès des missions et d’autres indicateurs clés.
-   - Ce tableau de bord aide à la prise de décision en offrant une vue d'ensemble claire et détaillée des opérations en cours.
+### 9. **Extensibility and Scalability**
+   - The system is designed to be easily extensible, allowing new features and new robots to be added at any time.
+   - The modular architecture supports the addition of new services, management of new mission types, and integration with other systems via the REST API.
+   - Update management is simplified, ensuring the system remains flexible to technological advancements and new user needs.
 
-### 9. **Extensibilité et évolutivité**
-   - Le système est conçu pour être facilement extensible, permettant l'ajout de nouvelles fonctionnalités et de nouveaux robots à tout moment.
-   - L’architecture modulaire permet l’ajout de nouveaux services, la gestion de nouveaux types de missions et l’intégration avec d'autres systèmes via l'API REST.
-   - La gestion des mises à jour est simplifiée, garantissant que le système reste flexible face aux évolutions technologiques et aux nouveaux besoins des utilisateurs.
+### 10. **Robot Status Monitoring**
+   - The system enables real-time monitoring of robot statuses through performance indicators and status reports.
+   - Monitoring includes data such as robot location, battery level, operational status, and ongoing missions.
+   - Alerts can be triggered when anomalies are detected in robot operations.
 
-### 10. **Suivi de l’état des robots**
-   - Le système permet de suivre en temps réel l'état des robots via des indicateurs de performance et des rapports d'état.
-   - Le suivi inclut des données telles que la localisation du robot, son niveau de batterie, son état opérationnel, et les missions en cours.
-   - Des alertes peuvent être envoyées en cas de détection d'anomalies dans le fonctionnement des robots.
-
-Ces fonctionnalités font de notre solution une plateforme complète et robuste pour gérer des robots autonomes et leurs missions de manière efficace et centralisée.
+These features make our solution a comprehensive and robust platform for efficiently and centrally managing autonomous robots and their missions.
