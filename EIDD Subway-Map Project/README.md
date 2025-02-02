@@ -1,55 +1,55 @@
-# Planificateur d'Itinéraire de Métro  
+# MetroFlow
 
-Une application en **Java** permettant de calculer les itinéraires optimaux dans un réseau de métro.  
-Ce projet utilise **Gradle** pour l'automatisation des builds, suit une approche de **Développement Piloté par les Tests (TDD)** et inclut des tests unitaires complets pour garantir la fiabilité et la précision.
-
----
-
-## Fonctionnalités  
-
-- **Calcul d'Itinéraire** :  
-  Détermine le chemin le plus court ou le plus rapide entre deux stations dans un réseau de métro.  
-
-- **Support des Tests Unitaires** :  
-  Les tests automatisés assurent la qualité et la robustesse de chaque composant du programme.  
-
-- **Approche TDD** :  
-  Les fonctionnalités ont été développées avec une méthodologie axée sur les tests, garantissant une couverture optimale.  
-
-- **Modularité** :  
-  Code organisé pour faciliter les modifications et l’extension.  
+A **Java** application that calculates optimal routes in a subway network.  
+This project uses **Gradle** for build automation, follows a **Test-Driven Development (TDD)** approach, and includes comprehensive unit tests to ensure reliability and accuracy.
 
 ---
 
-## Technologies Utilisées  
+## Features
 
-Les outils et technologies suivants ont été utilisés pour développer ce projet :  
+- **Route Calculation**:  
+  Determines the shortest or fastest route between two stations in a subway network.
 
-- **Langage** : Java  
-- **Système de Build** : Gradle  
-- **Tests Unitaires** : JUnit  
-- **IDE Recommandé** : IntelliJ IDEA ou Eclipse  
-- **Méthodologie de Développement** : Test-Driven Development (TDD)  
+- **Unit Test Support**:  
+  Automated tests ensure the quality and robustness of each component of the program.
+
+- **TDD Approach**:  
+  Features were developed using a test-oriented methodology, ensuring optimal coverage.
+
+- **Modularity**:  
+  Code is structured to facilitate modifications and extensions.
 
 ---
 
-## Exemple de Code  
+## Technologies Used
 
-Voici une démonstration du fonctionnement de base :  
+The following tools and technologies were utilized for this project:
+
+- **Language**: Java  
+- **Build System**: Gradle  
+- **Unit Tests**: JUnit  
+- **Recommended IDE**: IntelliJ IDEA or Eclipse  
+- **Development Methodology**: Test-Driven Development (TDD)  
+
+---
+
+## Code Example
+
+Below is a demonstration of the basic functionality:
 
 ```java
-public class ItineraireCalculator {
-    public Itineraire calculItineraire(Station depart, Station arrivee) {
-        return new Itineraire(depart, arrivee);
+public class ItineraryCalculator {
+    public Itinerary calculateItinerary(Station departure, Station arrival) {
+        return new Itinerary(departure, arrival);
     }
 }
 
-// Exemple de test unitaire
+// Example of a unit test
 @Test
-public void testItineraireCalculator() {
-    ItineraireCalculator calculator = new ItineraireCalculator();
-    Station depart = new Station("Départ");
-    Station arrivee = new Station("Arrivée");
-    Itineraire itineraire = calculator.calculItineraire(depart, arrivee);
-    assertNotNull(itineraire);
+public void testItineraryCalculator() {
+    ItineraryCalculator calculator = new ItineraryCalculator();
+    Station departure = new Station("Departure");
+    Station arrival = new Station("Arrival");
+    Itinerary itinerary = calculator.calculateItinerary(departure, arrival);
+    assertNotNull(itinerary);
 }
