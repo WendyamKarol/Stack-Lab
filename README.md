@@ -1,33 +1,38 @@
-# Portfolio de Projets académiques🎓
+# 🎓 Academic & Collaborative Project Portfolio  
 
-Bienvenue dans ce répertoire dédié à une sélection de projets réalisés dans un cadre académique ou collaboratif. Ces travaux, entrepris avec professionnalisme, illustrent mon engagement, mes compétences techniques et mon aptitude à travailler en équipe.
+Welcome to this repository, showcasing a selection of projects developed in academic and collaborative contexts.  
+Each project reflects professionalism, technical expertise, and the ability to work effectively in a team.  
 
-## 📋 Description
+## 📋 Overview  
 
-Ce répertoire regroupe des projets réalisés lors de mes études universitaires et d'autres collaborations. Chaque projet reflète un aspect particulier de ma formation et de mon parcours, mettant en lumière mes capacités à résoudre des problèmes complexes et à livrer des solutions bien conçues. 
+This repository gathers projects completed during my university studies and other collaborations.  
+Each project highlights a specific aspect of my background, demonstrating my skills in solving complex problems and delivering well-structured solutions.  
 
-Les projets sont développés dans des contextes variés, allant de la programmation synchrone pour des systèmes critiques à la conception de dispositifs IoT innovants.  
+The projects cover a variety of contexts, from **synchronous programming for critical systems** to **innovative IoT solutions**.  
 
-## 📁 Organisation des Projets
+## 📁 Project Structure  
 
-Chaque dossier de ce répertoire correspond à un projet distinct. Les informations spécifiques à chaque projet, comme le contexte, les objectifs, les technologies utilisées et les résultats obtenus, sont documentées dans un fichier `README.md` propre à chaque dossier.
+Each folder in this repository corresponds to a distinct project.  
+Inside each project folder, you will find a dedicated `README.md` that details:  
+- The **context** and objectives  
+- The **technologies and tools** used  
+- The **results and key learnings**  
 
-Exemples de projets inclus :
-- **Programmation Synchrone** : Contrôle d’un véhicule autonome en Heptagon et C pour un environnement simulé.
-- **Internet of Things (IoT)** : Développement d'un dispositif d'éclairage automatisé avec Raspberry Pi et Arduino.
-- **Applications Logicielles** : Projets divers réalisés en binôme ou en équipe, utilisant Python, C++, Java, etc.
+**Examples of included projects:**  
+- **Internet of Things (IoT)**: Automated lighting system with Raspberry Pi and Arduino.  
+- **Software Applications**: Various team-based projects in Python, C++, Java, and more.  
 
+## 🌟 Personal Goals  
 
-## 🌟 Objectifs Personnels
+Beyond technical implementation, these projects allowed me to:  
+- Strengthen my **problem-solving and analytical skills**  
+- Improve my **communication and teamwork abilities**  
+- Explore and gain hands-on experience with a wide range of **technologies and real-world use cases**  
 
-Au-delà de la réalisation technique, ces projets m'ont permis de :
-- Développer mes compétences en résolution de problèmes techniques.
-- Renforcer mes capacités de communication dans un cadre collaboratif.
-- Explorer et maîtriser des technologies variées adaptées à des cas d’usage réels.
+## 🛠️ Technologies & Tools  
 
-## 🛠️ Technologies et Outils
-
-Voici quelques-unes des technologies et outils utilisés dans ces projets :
-- **Langages de programmation** : C, C++, Python, Heptagon, Java.
-- **Environnements et outils** : Raspberry Pi, Arduino, SDL2, Makefile, GCC.
-- **Outils collaboratifs** : Git, GitHub.
+Some of the key technologies and tools used across these projects include:  
+- **Programming Languages**: C, C++, Python, Heptagon, Java  
+- **Hardware & Environments**: Raspberry Pi, Arduino, SDL2  
+- **Build & Development Tools**: Makefile, GCC  
+- **Collaboration Tools**: Git, GitHub  
